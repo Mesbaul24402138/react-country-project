@@ -7,7 +7,7 @@ const Countries = ({fetchData}) => {
 
 let [visitcountry,setvisitcountry]=useState([])
 
-console.log(visitcountry);
+
 
 
 
@@ -23,7 +23,7 @@ let handlevisitcountry=(country)=>{
 
     let countriinfo=use(fetchData)
     let countries=countriinfo.countries
-    // console.log(countries);
+ 
      
 
     return (
