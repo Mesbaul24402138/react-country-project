@@ -1,17 +1,24 @@
+
+import { Suspense } from 'react'
 import './App.css'
 import Countries from './componants/countries/Countries'
 
-
-
-const fetchData=fetch("https://openapi.programming-hero.com/api/all")
+let fetchData=fetch("https://openapi.programming-hero.com/api/all")
 .then(res=>res.json())
+
+
 
 function App() {
 
 
   return (
     <>
-        <Countries fetchData={fetchData}></Countries>
+
+    <Suspense fallback={<p>Loading...</p>}>
+            <Countries fetchData={fetchData}></Countries>
+    </Suspense>
+       
+        
     </>
   )
 }
