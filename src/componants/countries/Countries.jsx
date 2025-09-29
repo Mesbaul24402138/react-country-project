@@ -42,7 +42,7 @@ let handlevisitcountry=(country)=>{
          
             <div className='countries'>
                      {
-                        countries.map(country=><Country handlevisitcountry={handlevisitcountry}  country={country}></Country>)
+                        countries.map((country,index)=><Country key={index} handlevisitcountry={handlevisitcountry}  country={country}></Country>)
                      }
             </div>
             
